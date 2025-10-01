@@ -11,4 +11,12 @@ df = pd.DataFrame(data)
 print(df)
 
 # Save DataFrame to a CSV file
-df.to_csv('output.csv', index=False)
+#df.to_csv('output.csv', index=False)
+
+
+# Save DataFrame to an Excel file
+#df.to_excel('output.xlsx', index=False)
+
+
+# Save DataFrame to a JSON file
+df.to_json('output.json', orient='records', lines=True)
