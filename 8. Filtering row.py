@@ -1,3 +1,4 @@
+from matplotlib.pylab import f
 import pandas as pd
 
 data = {
@@ -21,5 +22,13 @@ print(filtered_df)
 print("\n")
 # Selecting rows on multiple conditions
 # Example: Select rows where Age is greater than 30 and Salary is greater than 60000
+# Using '&' for AND condition
 filtered_df_multi = df[(df["Age"] > 30) & (df["Salary"] > 60000)]
 print(filtered_df_multi)
+
+
+
+print("\n")
+# Using '|' for OR condition
+filtered_df_or = df[(df["Age"] < 30) | (df["Salary"] > 70000)]
+print(filtered_df_or)
